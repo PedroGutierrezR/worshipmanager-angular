@@ -1,0 +1,54 @@
+.header {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+
+.main {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.main p {
+  font-size: 1.5rem;
+  text-align: justify;
+  margin: 0 2rem;
+}
+
+.download {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download a {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: #3f51b5;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+}
+
+.download a:hover {
+  background-color: #283593;
+}
