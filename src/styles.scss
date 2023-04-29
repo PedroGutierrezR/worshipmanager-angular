@@ -1,5 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
 
-html, body { height: 100%; }
+html, body {
+  height: 100%;
+}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Mobile devices (portrait and landscape) */
+@media only screen and (max-width: 767px) {
+  body {
+    min-width: 320px;
+    height: 657px;
+  }
+}
+
+/* Tablets and small desktops */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* styles for tablets and small desktops */
+}
+
+/* Medium desktops */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* styles for medium desktops */
+}
+
+/* Large desktops */
+@media only screen and (min-width: 1200px) {
+  /* styles for large desktops */
+}
