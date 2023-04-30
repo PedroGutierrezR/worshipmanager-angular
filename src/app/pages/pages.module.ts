@@ -4,16 +4,19 @@ import { HomeComponent } from './home/home.component';
 import { ComponentsModule } from '../components/components.module';
 import { MatIconModule } from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { ConfirmationEmailComponent } from './confirmation-email/confirmation-email.component';
+import { PagesRoutingModule } from './pages-routing.module';
 
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, ConfirmationEmailComponent],
   imports: [
     CommonModule,
     ComponentsModule,
+    PagesRoutingModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
   ],
-  exports: [HomeComponent]
+  exports: [HomeComponent, ConfirmationEmailComponent]
 })
 export class PagesModule { }
