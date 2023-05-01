@@ -13,7 +13,7 @@ export class ConfirmationEmailComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  gotToHome() {
+  goToHome() {
     this.router.navigateByUrl('/home');
   }
 
