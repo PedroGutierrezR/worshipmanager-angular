@@ -18,7 +18,7 @@ export class ForgotPasswordComponent implements OnInit {
   response: number;
   validToken: boolean = false;
   hide: boolean = true;
-  oneDisabled: boolean = true;
+  spinnerEnabled: boolean = false;
   password: string = '';
 
   constructor(
@@ -39,32 +39,32 @@ export class ForgotPasswordComponent implements OnInit {
 
     this.route.params.subscribe((params : Params) => {
       this.token = params['token'];
-      console.log(this.token);
-      this.validToken = true;
-/*       this.forgotPasswordService.checkTokenReset(this.token).subscribe((data: any) => {
-
+      this.forgotPasswordService.checkTokenReset(this.token).subscribe((data: number) => {
         if(data === 1){
           this.validToken = true;
-        }else{
+        } else {
           this.validToken = false;
           setTimeout( () => {
             this.router.navigate(['home']);
           }, 2000)
         }
-      }); */
+      });
     })
   }
 
-  onSubmit(){
+  onSubmit() {
     const password: string = this.form.value.confirmPassword;
     console.log(password);
-/*     this.forgotPasswordService.reset(this.token, clave).subscribe(() => {
-      this.message = 'Password has been change';
 
+    this.spinnerEnabled = true;
+
+    this.forgotPasswordService.reset(this.token, password).subscribe(() => {
+      this.message = 'Contraseña cambió exitosamente';
+      this.spinnerEnabled = false;
         setTimeout(() => {
           this.router.navigate(['home']);
         }, 2000);
-    }); */
+    });
   }
 
   passwordChange() {

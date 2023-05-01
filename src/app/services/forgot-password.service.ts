@@ -10,11 +10,11 @@ export class ForgotPasswordService {
   constructor(private http: HttpClient) { }
 
   checkTokenReset(token: string) {
-    return this.http.get<number>(`${environment.host}/reset-passwords/check/${token}`);
+    return this.http.get<number>(`${environment.host}/api/v1/reset/check/${token}`);
   }
 
   reset(token: string, password: string) {
-    return this.http.post(`${environment.host}/reset-passwords/reset/${token}`, password, {
+    return this.http.post(`${environment.host}/api/v1/reset/reset/${token}`, password, {
       headers: new HttpHeaders().set('Content-Type', 'text/plain')
     });
   }
