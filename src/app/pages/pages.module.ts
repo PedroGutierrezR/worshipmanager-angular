@@ -12,9 +12,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { LinkExpiredComponent } from './link-expired/link-expired.component';
 
 @NgModule({
-  declarations: [HomeComponent, ConfirmationEmailComponent, ForgotPasswordComponent],
+  declarations: [HomeComponent, ConfirmationEmailComponent, ForgotPasswordComponent, LinkExpiredComponent],
   imports: [
     CommonModule,
     ComponentsModule,

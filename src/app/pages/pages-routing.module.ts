@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { ConfirmationEmailComponent } from './confirmation-email/confirmation-email.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { LinkExpiredComponent } from './link-expired/link-expired.component';
 
 const routes: Routes = [
   {
@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path: 'forgot/:token',
     component: ForgotPasswordComponent
+  },
+  {
+    path: 'expired',
+    component: LinkExpiredComponent
   },
   { path: '**', redirectTo: 'home'}
 ];
